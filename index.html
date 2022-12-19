@@ -47,6 +47,7 @@
             We appreciate you taking the time to give a rating. If you ever need more support,
             don't hesitate to get in touch!
           </p>
+          <p>Changed your mind? <span id="return" onclick="goBack()">Rate again!</span></p>
         </section>
         <!-- Thank you state end -->
       </div>
@@ -67,11 +68,17 @@
     }
 
     /*function submitRate() {
+      console.log("hello")
       const formulario = document.getElementById("form");
       const rate = formulario.elements["rate"].value
-      document.getElementById("selected").innerText = `You selected ${rate} out of 5`;
+      document.getElementById("rate-selected").innerText = `You selected ${rate} out of 5`;
       document.querySelector('.flip-card-inner').style.transform = "rotateY(180deg)";
-    }*/
+    }*/ /* both options for submitRate() work */
+
+    function goBack() {
+      document.querySelector('.flip-card-inner').style.transform = "rotateY(-180deg)";
+      document.querySelector('.flip-card-inner').style.transform = "rotateY(0deg)";
+    }
   </script>
 </body>
 </html>
