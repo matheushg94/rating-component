@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/* Mobile version;. 375px */
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --cor1: hsl(25, 97%, 53%);
+    --cor2: hsl(217, 12%, 63%);
+    --cor3: hsl(216, 12%, 54%);
+    --cor4: hsl(213, 19%, 18%);
+    --cor4b: hsl(212, 22%, 15%);
+    --cor4c: hsl(210, 24%, 11%);
+    --cor5: hsl(216, 12%, 8%);
+
+    --font: 'Overpass', sans-serif; /*400, 700*/
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 15px;
+}
+
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--cor5);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.flip-card { /* Flip card component */
+    background-color: transparent;
+    width: 355px;
+    height: 390px;
+    perspective: 1000px;
+}
+
+.flip-card-inner { /* Flip card component */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+section.card { /* Flip card component */
+    background-image: linear-gradient(to bottom, var(--cor4b), var(--cor4c));
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+section.card > div.title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+section.card > p {
+    color: var(--cor2);
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 20px 0px;
+}
+
+/* Rating State */
+
+section#card-rating > div#star-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor4);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+form > div#rate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form > div#rate > input {
+    display: none;
+}
+
+form > div#rate label {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    text-align: center;
+    line-height: 45px;
+}
+
+div#rate input:checked + label { /* style for the label associated with the checked radio */
+    background-color: var(--cor3);
+    color: white;
+}
+
+form > div#rate label:hover {
+    background-color: var(--cor1);
+    color: white;
+    cursor: pointer;
+}
+
+form > input#submit {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--cor1);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+form > input#submit:hover {
+    background-color: white;
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+/* Thank You State */
+
+section#card-thanks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg); /* Flip card component */
+}
+
+section#card-thanks > div#img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+section#card-thanks > div#rate-selected {
+    background-color: var(--cor4);
+    color: var(--cor1);
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 50px;
+}
+
+section#card-thanks > div.title {
+    text-align: center;
+}
+
+section#card-thanks > p {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+section#card-thanks > p > span#return {
+    color: var(--cor2);
+    text-decoration: underline;
+}
+
+section#card-thanks > p > span#return:hover {
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer a {
+    font-size: 12px;
+    color: var(--cor2);
+}
+
+.footer a:hover {
+    color: var(--cor1);
+}
