@@ -68,7 +68,7 @@
   <script>
     function submitRate() {
       const rate = document.querySelector('input[name="rate"]:checked').value;
-      document.getElementById("rate-selected").innerText = `You selected ${rate} out of 5`;
+      document.getElementsByClassName("rate-selected").innerText = `You selected ${rate} out of 5`;
       document.querySelector('.flip-card-inner').style.transform = "rotateY(180deg)";
     }
 
