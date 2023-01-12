@@ -7,9 +7,9 @@
     --color2: hsl(217, 12%, 63%);
     --color3: hsl(216, 12%, 54%);
     --color4: hsl(213, 19%, 18%);
-    --color4b: hsl(212, 22%, 15%);
-    --color4c: hsl(210, 24%, 11%);
-    --color5: hsl(216, 12%, 8%);
+    --color5: hsl(212, 20%, 16%);
+    --color6: hsl(217, 28%, 13%);
+    --color7: hsl(216, 12%, 8%);
 
     --ff-base: 'Overpass', sans-serif;
 
@@ -57,7 +57,7 @@ h1, h2, h3 {
 /* General styling */
 
 body {
-    background-color: var(--color5);
+    background-color: var(--color7);
     font-family: var(--ff-base);
     font-weight: var(--fw-normal);
 }
@@ -86,8 +86,7 @@ main {
 }
 
 .card {
-    background-image: linear-gradient(to bottom,var(--color4b), var(--color4c));
-    margin: 10px;
+    background-image: linear-gradient(to bottom,var(--color5), var(--color6));
     padding: 30px;
     padding: 1.875rem;
     border-radius: 20px;
@@ -127,7 +126,7 @@ main {
 
 .rate {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     margin: 20px 0px;
 }
 
@@ -178,8 +177,8 @@ main {
 /* Thank You card */
 
 .card-thanks {
-    display: none;
     text-align: center;
+    transform: rotateY(180deg);
 }
 
 .image {
@@ -190,8 +189,8 @@ main {
 .rate-selected {
     background-color: var(--color4);
     color: var(--color1);
-    margin: 20px 70px;
-    margin: 1.25rem 4.375rem;
+    margin: 20px 50px;
+    margin: 1.25rem 3.125rem;
     padding: 6px;
     padding: 0.375rem;
     border-radius: 50px;

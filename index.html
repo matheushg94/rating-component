@@ -32,7 +32,7 @@
           </div>
           <p class="title">How did we do?</p>
           <p class="text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-          <form action="#.php" method="get" class="form">
+          <form action="#" method="get" class="form">
             <div class="rate">
               <input type="radio" name="rate" id="r1" value="1"><label for="r1">1</label>
               <input type="radio" name="rate" id="r2" value="2"><label for="r2">2</label>
@@ -40,7 +40,7 @@
               <input type="radio" name="rate" id="r4" value="4"><label for="r4">4</label>
               <input type="radio" name="rate" id="r5" value="5"><label for="r5">5</label>
             </div>
-            <input class="submit-btn" type="button" value="Submit" onclick="submitRate()"></input>
+            <input class="submit-btn" type="button" value="submit" onclick="submitRate()"></input>
           </form>
         </section>
         <!-- Rating state end -->
@@ -66,19 +66,20 @@
   </footer>
 
   <script>
-    function submitRate() {
-      const rate = document.querySelector('input[name="rate"]:checked').value;
-      document.getElementsByClassName("rate-selected").innerText = `You selected ${rate} out of 5`;
-      document.querySelector('.flip-card-inner').style.transform = "rotateY(180deg)";
-    }
+    /* both options for submitRate() work */
 
     /*function submitRate() {
-      console.log("hello")
-      const formulario = document.getElementById("form");
-      const rate = formulario.elements["rate"].value
-      document.getElementById("rate-selected").innerText = `You selected ${rate} out of 5`;
-      document.querySelector('.flip-card-inner').style.transform = "rotateY(180deg)";
-    }*/ /* both options for submitRate() work */
+      const rate = document.querySelector('input[name="rate"]:checked').value;
+      document.getElementsByClassName("rate-selected")[0].innerText = `You selected ${rate} out of 5`;
+      document.querySelector('.flip-card-inner').style.transform = "rotateY(-180deg)";
+    }*/
+
+    function submitRate() {
+      const formulario = document.getElementsByClassName("form")[0];
+      const rate = formulario.elements["rate"].value;
+      document.getElementsByClassName("rate-selected")[0].innerText = `You selected ${rate} out of 5`;
+      document.querySelector('.flip-card-inner').style.transform = "rotateY(-180deg)";
+    }
   </script>
 
 </body>
