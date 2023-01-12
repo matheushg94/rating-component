@@ -42,16 +42,17 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Flexbox and Grid layout
 - Mobile-first workflow
+- JavaScript
 
 ### What I learned
 
-This is the first challenge in which I use JavaScript code for interactions.
+This is the first challenge in which I use JavaScript code for interactions. I also tried a simple flip animation for transitioning between card sides.
 
 ### Continued development
 
-Since I'm just starting my learning of HTML, CSS, JavaScript and web development in general, I'm still focusing on learning every aspect of these technologies, especially the fundamentals.
+Since I'm just starting my learning of HTML, CSS, JavaScript and web development in general, I'm still focusing on learning every aspect of these technologies, mainly the fundamentals.
 
 ### Useful resources
 

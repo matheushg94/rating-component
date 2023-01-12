@@ -63,18 +63,20 @@ body {
 }
 
 main {
-    min-height: 100vh;
     display: grid;
     place-content: center;
+    min-height: calc(100vh - 28.4px);
     font-size: 15px;
     font-size: 0.938rem;
 }
 
 .flip-card { /* Flip card component */
-    background-color: transparent;
     width: 355px;
     height: 390px;
     perspective: 1000px;
+    background-color: transparent;
+    margin: 10px;
+    margin: 0.625rem;
 }
 
 .flip-card-inner { /* Flip card component */
@@ -85,23 +87,24 @@ main {
     transform-style: preserve-3d;
 }
 
-.card {
-    background-image: linear-gradient(to bottom,var(--color5), var(--color6));
-    padding: 30px;
-    padding: 1.875rem;
-    border-radius: 20px;
-    color: var(--color3);
-
+.card { /* Flip card component */
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+
+    background-image: linear-gradient(to bottom,var(--color5), var(--color6));
+    color: var(--color3);
+    padding: 30px;
+    padding: 1.875rem;
+    border-radius: 20px;
 }
 
 .title {
     color: white;
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: var(--fw-bold);
     margin: 10px 0px;
     margin: 0.625rem 0rem;
 }
@@ -116,18 +119,19 @@ main {
 .star-icon {
     display: grid;
     place-content: center;
-    background-color: var(--color4);
     width: 44px;
     width: 2.75rem;
     height: 44px;
     height: 2.75rem;
+    background-color: var(--color4);
     border-radius: 50%;
 }
 
 .rate {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 0px;
+    margin: 1.625rem 0rem;
 }
 
 .rate input {
@@ -137,15 +141,16 @@ main {
 .rate label {
     display: grid;
     place-content: center;
-    background-color: var(--color4);
     width: 44px;
     width: 2.75rem;
     height: 44px;
     height: 2.75rem;
+    background-color: var(--color4);
+    font-weight: var(--fw-bold);
     border-radius: 50%;
 }
 
-.rate input:checked + label {
+.rate input:checked + label { /* style for the label associated with the checked radio */
     background-color: var(--color3);
     color: white;
 }
@@ -162,6 +167,7 @@ main {
     height: 2.75rem;
     background-color: var(--color1);
     color: white;
+    font-weight: var(--fw-bold);
     text-transform: uppercase;
     letter-spacing: 3px;
     border: 0;
@@ -178,7 +184,7 @@ main {
 
 .card-thanks {
     text-align: center;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Flip card component */
 }
 
 .image {
@@ -189,8 +195,8 @@ main {
 .rate-selected {
     background-color: var(--color4);
     color: var(--color1);
-    margin: 20px 50px;
-    margin: 1.25rem 3.125rem;
+    margin: 20px 56px;
+    margin: 1.25rem 3.5rem;
     padding: 6px;
     padding: 0.375rem;
     border-radius: 50px;
@@ -199,5 +205,19 @@ main {
 /* Footer */
 
 .footer {
-    display: none;
+    color: var(--color3);
+    text-align: center;
+    font-size: 12px;
+    font-size: 0.75rem;
+    margin: 4px;
+    margin: 0.25rem;
+}
+
+.footer a {
+    color: inherit;
+    font-weight: var(--fw-bold);
+}
+
+.footer a:hover {
+    color: var(--color1);
 }
