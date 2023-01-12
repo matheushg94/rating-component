@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Rating state](./solution-scrshot/Interactive-rating-component_rating-state.jpg)
-![Thank you state](./solution-scrshot/Interactive-rating-component_thank-state.jpg)
+![Rating state](./solution-scrshot/Interactive-rating-component_rating.jpg)
+![Thank you state](./solution-scrshot/Interactive-rating-component_thankyou.jpg)
 
 ### Links
 
