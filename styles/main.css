@@ -130,17 +130,18 @@ main {
 .rate {
     display: flex;
     justify-content: space-between;
+    height: 44px;
+    height: 2.75rem;
     margin: 26px 0px;
     margin: 1.625rem 0rem;
 }
 
-.rate input {
-    display: none;
+.rate div {
+    position: relative;
 }
 
-.rate label {
-    display: grid;
-    place-content: center;
+.rate input {
+    appearance: none;
     width: 44px;
     width: 2.75rem;
     height: 44px;
@@ -150,13 +151,27 @@ main {
     border-radius: 50%;
 }
 
-.rate input:checked + label { /* style for the label associated with the checked radio */
+.rate label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rate input:checked {
     background-color: var(--color3);
+}
+
+.rate input:checked + label {
     color: white;
 }
 
-.rate label:hover {
+.rate input:hover {
     background-color: var(--color1);
+    cursor: pointer;
+}
+
+.rate input:hover + label {
     color: white;
     cursor: pointer;
 }

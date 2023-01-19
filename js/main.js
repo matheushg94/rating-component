@@ -1,9 +1,9 @@
 function submitRate() {
-    //const rate = document.querySelector('input[name="rate"]:checked').value
+    const rate = document.querySelector('input[name="rate"]:checked').value
     const rateSelected = document.querySelector('.rate-selected')
     const flipCard = document.querySelector('.flip-card-inner')
 
-    //rateSelected.innerText = `You selected ${rate} out of 5`
+    rateSelected.innerText = `You selected ${rate} out of 5`
     flipCard.style.transform = "rotateY(-180deg)"
 }
 
